@@ -32,7 +32,7 @@ function idle_trigger {
 }
 
 function start_idle_timer {
-  TMOUT=60
+  TMOUT=300
   TRAPALRM() { idle_trigger }
 }
 
