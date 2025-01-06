@@ -26,17 +26,17 @@ bindkey '^H' backward-char
 bindkey '^L' forward-char
 bindkey '^D' kill-whole-line
 
-function idle_trigger {
-  eval "cmatrix -s -C red"
-  zle reset-prompt
-}
-
-function start_idle_timer {
-  TMOUT=300
-  TRAPALRM() { idle_trigger }
-}
-
-start_idle_timer
+# function idle_trigger {
+#   eval "cmatrix -s -C red"
+#   zle reset-prompt
+# }
+#
+# function start_idle_timer {
+#   TMOUT=300
+#   TRAPALRM() { idle_trigger }
+# }
+#
+# start_idle_timer
 
 eval $(thefuck --alias f)
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
