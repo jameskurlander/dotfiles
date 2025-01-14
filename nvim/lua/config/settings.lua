@@ -26,6 +26,15 @@ vim.opt.fillchars:append({
   eob = " ",
 })
 
+vim.cmd("syntax enable")
+vim.opt.background = "dark" -- or "light"
+
+local highlightSettings = { fg="black", bg = "#00e49a", underline = false }
+
+vim.api.nvim_set_hl(0, "IlluminatedWordText", highlightSettings)
+vim.api.nvim_set_hl(0, "IlluminatedWordRead", highlightSettings)
+vim.api.nvim_set_hl(0, "IlluminatedWordWrite", highlightSettings)
+
 vim.cmd([[
   highlight DashboardHeader guifg=#f1fa8c
   highlight DashboardCenter guifg=#ff79c6
