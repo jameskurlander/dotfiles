@@ -12,15 +12,6 @@ vim.keymap.set('n', '<leader>df', function()
     })
 end, settings)
 
--- Copilot
-vim.keymap.set('n', '<leader>ac', ':CopilotChatToggle<CR>', settings);
-vim.keymap.set('n', '<leader>as', ':CopilotChatStop<CR>', settings);
-
-vim.keymap.set('v', '<leader>ae', ':CopilotChatExplain<CR>', settings);
-vim.keymap.set('v', '<leader>ar', ':CopilotChatReview<CR>', settings);
-vim.keymap.set('v', '<leader>af', ':CopilotChatFix<CR>', settings);
-vim.keymap.set('v', '<leader>ao', ':CopilotChatOptimize<CR>', settings);
-
 -- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {});
