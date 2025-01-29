@@ -1,4 +1,3 @@
--- vim.opt.cmdheight = 0
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.background = "dark"
@@ -25,9 +24,6 @@ vim.opt.laststatus = 2
 vim.opt.fillchars:append({
   eob = " ",
 })
-
-vim.cmd("syntax enable")
-vim.opt.background = "dark" -- or "light"
 
 local highlightSettings = { fg="black", bg = "#00e49a", underline = false }
 

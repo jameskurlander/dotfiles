@@ -17,14 +17,24 @@ return {
     lspconfig.ts_ls.setup({});
 
     --lua
-    lspconfig.lua_ls.setup({});
+    lspconfig.lua_ls.setup({
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim" },
+          },
+        },
+      },
+    });
     -- lspconfig.luacheck.setup({});
     -- lspconfig.stylua.setup({});
 
     --php
     -- lspconfig.blade_formatter.setup({});
     lspconfig.intelephense.setup({});
-    lspconfig.phpactor.setup({ filetypes = { 'php', 'blade' } });
+    lspconfig.phpactor.setup({
+      filetypes = { 'php', 'blade' }
+    });
 
     --other
     lspconfig.typos_lsp.setup({});
