@@ -1,0 +1,61 @@
+return {
+  "hrsh7th/nvim-cmp",
+  dependencies = {
+    -- snippet engine
+    "L3MON4D3/LuaSnip",
+
+    -- snippet collection
+    "rafamadriz/friendly-snippets",
+
+    -- completion sources
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-path",
+    "hrsh7th/cmp-cmdline",
+    "hrsh7th/cmp-nvim-lua",
+    "saadparwaiz1/cmp_luasnip",
+    "windwp/nvim-autopairs",
+  },
+  config = function()
+    local cmp = require("cmp");
+    local luasnip = require("luasnip");
+
+    require("luasnip.loaders.from_vscode").lazy_load();
+
+    cmp.setup({
+      completion = {
+        completeopt = "menu,menuone,preview",
+      },
+      snippet = {
+        expand = function(args)
+          luasnip.lsp_expand(args.body)
+        end,
+      },
+      mapping = cmp.mapping.preset.insert();
+      sources = cmp.config.sources({
+        { name = "luasnip" },
+        { name = "nvim_lsp" },
+        { name = "buffer" },
+        { name = "path" },
+      }),
+    });
+
+    cmp.setup.cmdline("/", {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = "buffer" },
+      },
+    });
+
+    cmp.setup.cmdline(":", {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = "path" },
+        { name = "cmdline" },
+      },
+    });
+
+    local cmp_autopairs = require("nvim-autopairs.completion.cmp");
+    cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done());
+  end,
+}
