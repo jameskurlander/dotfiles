@@ -7,3 +7,4 @@ cursor-style = block
 fullscreen = true
 
 theme = Aura
+background = #080808
