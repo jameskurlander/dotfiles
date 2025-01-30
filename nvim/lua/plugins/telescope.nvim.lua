@@ -4,7 +4,7 @@ return {
   config = function()
     require('telescope').setup({
       defaults = {
-        disable_devicons = true,
+        disable_devicons = false,
         vimgrep_arguments = {
           "rg",
           "--color=never",

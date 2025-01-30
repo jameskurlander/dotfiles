@@ -30,9 +30,3 @@ vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = false, underlin
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = false, underline = true, sp = "#FFA500" }) -- Optional: Orange for warnings
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = false, underline = true, sp = "#00FFFF" }) -- Optional: Cyan for info
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = false, underline = true, sp = "#ADD8E6" }) -- Optional: Light blue for hints
-
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    vim.schedule(ConfigureLualine)
-  end,
-})
