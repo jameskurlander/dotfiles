@@ -8,16 +8,6 @@ return {
         icons_enabled = true,
         globalstatus = true,
         theme = 'auto',
-        -- theme = function()
-        --   local theme = require("lualine.themes.auto") -- Load auto theme
-        --   -- Set backgrounds to 'none'
-        --   for _, mode in pairs(theme) do
-        --     for _, section in pairs(mode) do
-        --       section.bg = "none"
-        --     end
-        --   end
-        --   return theme
-        -- end,
       },
       sections = {
         lualine_a = {
@@ -30,20 +20,22 @@ return {
         lualine_b = {
           {
             'filetype',
+            separator = { left = '', right = '' },
+            icon_only = true,
             padding = { left = 1 },
-            color = { bg = 'none' },
-          }
+          },
         },
         lualine_c = {
           {
             'filename',
+            separator = { left = '', right = '' },
+            padding = { left = 0 },
             path = 1,
-            color = { bg = 'none' },
           }
         },
         lualine_x = {
           {
-            color = { fg = 'red' },
+            'searchcount'
           }
         },
         lualine_y = {
@@ -51,7 +43,6 @@ return {
             'progress',
             separator = { left = '' },
             padding = { left = 1, right = 1 },
-            color = { bg = 'none' },
           }
         },
         lualine_z = {

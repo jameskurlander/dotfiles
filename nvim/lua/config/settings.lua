@@ -1,46 +1,49 @@
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.background = "dark"
-vim.opt.conceallevel = 2
-vim.opt.guicursor = ""
-vim.opt.spelllang = "en_us"
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.clipboard = "unnamedplus"
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.smartindent = true
-vim.opt.wrap = true
+--theme (must be at top to maintain highlight overrides)
+vim.cmd [[colorscheme moonfly]]
+
+--search
 vim.opt.hlsearch = true
+vim.opt.ignorecase = true
 vim.opt.incsearch = true
+vim.opt.smartcase = false
+
+--display
+vim.opt.background = "dark"
 vim.opt.termguicolors = true
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
+
+--for hiding/showing obsidan markdown
+vim.opt.conceallevel = 2
+
+--general
+vim.opt.clipboard = "unnamedplus"
+vim.opt.cmdheight = 1
+vim.opt.guicursor = ''
 vim.opt.isfname:append("@-@")
+vim.opt.scrolloff = 8
+vim.opt.showcmd = false
+vim.opt.signcolumn = "yes"
+vim.opt.spelllang = "en_us"
 vim.opt.updatetime = 50
-vim.opt.laststatus = 2
-vim.opt.fillchars:append({
-  eob = " ",
-})
+vim.opt.wrap = true
 
-local highlightSettings = { fg="black", bg = "#00e49a", underline = false }
+--indentation
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.smartindent = true
+vim.opt.softtabstop = 2
+vim.opt.tabstop = 2
 
-vim.api.nvim_set_hl(0, "IlluminatedWordText", highlightSettings)
-vim.api.nvim_set_hl(0, "IlluminatedWordRead", highlightSettings)
-vim.api.nvim_set_hl(0, "IlluminatedWordWrite", highlightSettings)
+--buffer separator
+vim.api.nvim_set_hl(0, "WinSeparator", { fg='#303030', bg = 'none' })
+vim.opt.fillchars:append {
+  eob = ' ',
+  vert = '│',
+  horiz = '─',
+}
 
-vim.cmd([[
-  highlight DashboardHeader guifg=#f1fa8c
-  highlight DashboardCenter guifg=#ff79c6
-  highlight DashboardFooter guifg=#f8f8f2
-  highlight Normal guibg=NONE ctermbg=NONE
-  highlight NonText guibg=NONE ctermbg=NONE
-]])
-
+--line numbers
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#778899' })
 vim.api.nvim_set_hl(0, 'LineNr', { fg='white' })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#778899' })
-
-vim.cmd [[colorscheme moonfly]]
+vim.opt.number = true
+vim.opt.relativenumber = true
