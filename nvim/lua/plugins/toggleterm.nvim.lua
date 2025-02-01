@@ -14,16 +14,6 @@ return {
       direction = 'horizontal',
       close_on_exit = true,
       shell = vim.o.shell,
-      float_opts = {
-        border = 'single',
-        width = 80,
-        height = 40,
-        winblend = 3,
-        highlights = {
-          border = 'Normal',
-          background = 'Normal',
-        },
-      },
     }
   end,
 }
