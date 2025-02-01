@@ -1,7 +1,7 @@
 #!/bin/bash
 
 playback_info=$(spotify_player get key playback)
-status_line=" "
+status_line=""
 
 if [ -n "$playback_info" ]; then
   artist_name=$(echo "$playback_info" | jq -r '.item.artists[0].name')

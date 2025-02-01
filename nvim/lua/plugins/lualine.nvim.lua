@@ -1,6 +1,8 @@
 return {
   'nvim-lualine/lualine.nvim',
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  dependencies = {
+    'nvim-tree/nvim-web-devicons',
+  },
   lazy = false,
   config = function()
     require('lualine').setup {
@@ -33,11 +35,7 @@ return {
             path = 1,
           }
         },
-        lualine_x = {
-          {
-            'searchcount'
-          }
-        },
+        lualine_x = {},
         lualine_y = {
           {
             'progress',
