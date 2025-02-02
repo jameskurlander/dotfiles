@@ -18,11 +18,23 @@ return {
   },
   config = function()
     local cmp = require("cmp");
+    local lspkind = require("lspkind");
     local luasnip = require("luasnip");
 
     require("luasnip.loaders.from_vscode").lazy_load();
 
     cmp.setup({
+      window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+      },
+      formatting = {
+        format = lspkind.cmp_format({
+          mode = 'symbol_text',
+          maxwidth = 50,
+          ellipsis_char = '…',
+        }),
+      },
       completion = {
         completeopt = "menu,menuone,preview",
       },
