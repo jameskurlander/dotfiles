@@ -33,6 +33,13 @@ vim.opt.smartindent = true
 vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
 
+--commenting
+vim.filetype.get_option = function(filetype, option)
+  return option == "commentstring"
+    and require("ts_context_commentstring.internal").calculate_commentstring()
+    or vim.filetype.get_option(filetype, option)
+end
+
 --buffer separator
 vim.api.nvim_set_hl(0, "WinSeparator", { fg='#303030', bg = 'none' })
 vim.opt.fillchars:append {
