@@ -1,15 +1,13 @@
 --theme (must be at top to maintain highlight overrides)
 vim.cmd [[colorscheme moonfly]]
+vim.opt.background = "dark"
+vim.opt.termguicolors = true
 
 --search
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
 vim.opt.smartcase = false
-
---display
-vim.opt.background = "dark"
-vim.opt.termguicolors = true
 
 --for hiding/showing obsidan markdown
 vim.opt.conceallevel = 2
