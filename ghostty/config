@@ -2,9 +2,5 @@ font-family = Berkeley Mono
 font-size = 18
 
 cursor-style = block
-# cursor-color = 00e49a
-
 fullscreen = true
-
 theme = Aura
-background = #080808

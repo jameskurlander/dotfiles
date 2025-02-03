@@ -1,7 +1,8 @@
 --theme (must be at top to maintain highlight overrides)
 vim.cmd [[colorscheme moonfly]]
-vim.opt.background = "dark"
 vim.opt.termguicolors = true
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
 --search
 vim.opt.hlsearch = true
@@ -39,6 +40,7 @@ vim.filetype.get_option = function(filetype, option)
 end
 
 --buffer separator
+vim.api.nvim_set_hl(0, "SignColumn", { bg = 'none' })
 vim.api.nvim_set_hl(0, "WinSeparator", { fg='#303030', bg = 'none' })
 vim.opt.fillchars:append {
   eob = ' ',

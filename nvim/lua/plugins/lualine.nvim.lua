@@ -35,7 +35,13 @@ return {
             path = 1,
           }
         },
-        lualine_x = {},
+        lualine_x = {
+          {
+            'diagnostics',
+            separator = { left = '', right = '' },
+            padding = { left = 0, right = 0 },
+          }
+        },
         lualine_y = {
           {
             'progress',

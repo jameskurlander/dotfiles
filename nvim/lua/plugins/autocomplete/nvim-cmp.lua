@@ -20,6 +20,13 @@ return {
     local cmp = require("cmp");
     local lspkind = require("lspkind");
     local luasnip = require("luasnip");
+    local mappings = {
+      ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+      ["<C-f>"] = cmp.mapping.scroll_docs(4),
+      ["<C-Space"] = cmp.mapping.confirm(),
+      ["<C-e>"] = cmp.mapping.close(),
+      -- ["<CR>"] = cmp.mapping.confirm({ select = true }),
+    };
 
     require("luasnip.loaders.from_vscode").lazy_load();
 
@@ -43,7 +50,7 @@ return {
           luasnip.lsp_expand(args.body)
         end,
       },
-      mapping = cmp.mapping.preset.insert();
+      mapping = cmp.mapping.preset.insert(mappings);
       sources = cmp.config.sources({
         { name = "luasnip" },
         { name = "nvim_lsp" },
@@ -53,14 +60,14 @@ return {
     });
 
     cmp.setup.cmdline("/", {
-      mapping = cmp.mapping.preset.cmdline(),
+      mapping = cmp.mapping.preset.cmdline(mappings),
       sources = {
         { name = "buffer" },
       },
     });
 
     cmp.setup.cmdline(":", {
-      mapping = cmp.mapping.preset.cmdline(),
+      mapping = cmp.mapping.preset.cmdline(mappings),
       sources = {
         { name = "path" },
         { name = "cmdline" },

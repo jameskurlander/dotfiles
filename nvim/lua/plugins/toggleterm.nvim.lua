@@ -8,6 +8,7 @@ return {
       hide_numbers = true,
       start_in_insert = true,
       insert_mappings = true,
+      shade_terminals = false,
       persist_size = true,
       direction = 'horizontal',
       close_on_exit = true,
