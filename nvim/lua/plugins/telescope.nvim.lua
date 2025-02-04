@@ -4,6 +4,7 @@ return {
   config = function()
     require('telescope').setup({
       defaults = {
+        -- winblend = 5,
         disable_devicons = false,
         vimgrep_arguments = {
           "rg",

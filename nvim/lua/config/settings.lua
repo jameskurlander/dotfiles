@@ -54,3 +54,9 @@ vim.api.nvim_set_hl(0, 'LineNr', { fg='white' })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#778899' })
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+--telescope
+vim.api.nvim_set_hl(0, "TelescopeBorder", { fg='#303030', bg = "none" })
+vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg='#303030', bg = "none" })
+vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { fg='#303030', bg = "none" })
+vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { fg='#303030', bg = "none" })
