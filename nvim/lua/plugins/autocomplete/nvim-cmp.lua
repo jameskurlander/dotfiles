@@ -21,11 +21,18 @@ return {
     local lspkind = require("lspkind");
     local luasnip = require("luasnip");
     local mappings = {
+      ["<CR>"] = cmp.mapping.complete({ select = true }),
+      ["<C-Space>"] = cmp.mapping({
+        c = function(fallback)
+          if cmp.visible() then
+            cmp.confirm({ select = true })
+          else
+            fallback()
+          end
+        end
+      }),
       ["<C-b>"] = cmp.mapping.scroll_docs(-4),
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
-      ["<C-Space"] = cmp.mapping.confirm(),
-      ["<C-e>"] = cmp.mapping.close(),
-      -- ["<CR>"] = cmp.mapping.confirm({ select = true }),
     };
 
     require("luasnip.loaders.from_vscode").lazy_load();
@@ -50,7 +57,11 @@ return {
           luasnip.lsp_expand(args.body)
         end,
       },
-      mapping = cmp.mapping.preset.insert(mappings);
+      mapping = cmp.mapping.preset.insert({
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+      });
       sources = cmp.config.sources({
         { name = "luasnip" },
         { name = "nvim_lsp" },
