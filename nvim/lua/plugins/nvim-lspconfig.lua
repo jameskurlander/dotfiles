@@ -9,11 +9,39 @@ return {
     -- lspconfig.shellcheck.setup({});
 
     --javascript, typescript, jsx, tsx, json, css, graphql, html
-    lspconfig.biome.setup({});
+    lspconfig.biome.setup({
+      cmd = { 'biome', 'lsp-proxy' },
+      filetypes = {
+        'astro',
+        'css',
+        'graphql',
+        'javascript',
+        'javascriptreact',
+        'json',
+        'jsonc',
+        'svelte',
+        'typescript',
+        'typescript.tsx',
+        'typescriptreact',
+        'vue',
+      },
+      root_dir = lspconfig.util.root_pattern('biome.json', 'biome.jsonc'),
+      single_file_support = false,
+    });
     lspconfig.cssls.setup({});
     lspconfig.graphql.setup({});
     lspconfig.html.setup({});
-    lspconfig.tailwindcss.setup({});
+    lspconfig.tailwindcss.setup({
+      settings = {
+        tailwindCSS = {
+          experimental = {
+            classRegex = {
+              { "([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]" }
+            },
+          },
+        },
+      },
+    })
     lspconfig.ts_ls.setup({});
 
     --lua

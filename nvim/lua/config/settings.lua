@@ -11,7 +11,7 @@ vim.opt.incsearch = true
 vim.opt.smartcase = false
 
 --for hiding/showing obsidan markdown
-vim.opt.conceallevel = 2
+vim.opt.conceallevel = 0
 
 --general
 vim.opt.clipboard = "unnamedplus"
@@ -35,13 +35,13 @@ vim.opt.tabstop = 2
 --commenting
 vim.filetype.get_option = function(filetype, option)
   return option == "commentstring"
-    and require("ts_context_commentstring.internal").calculate_commentstring()
-    or vim.filetype.get_option(filetype, option)
+      and require("ts_context_commentstring.internal").calculate_commentstring()
+      or vim.filetype.get_option(filetype, option)
 end
 
 --buffer separator
 vim.api.nvim_set_hl(0, "SignColumn", { bg = 'none' })
-vim.api.nvim_set_hl(0, "WinSeparator", { fg='#303030', bg = 'none' })
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = '#303030', bg = 'none' })
 vim.opt.fillchars:append {
   eob = ' ',
   vert = '│',
@@ -49,14 +49,32 @@ vim.opt.fillchars:append {
 }
 
 --line numbers
-vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#778899' })
-vim.api.nvim_set_hl(0, 'LineNr', { fg='white' })
-vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#778899' })
+vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = '#778899' })
+vim.api.nvim_set_hl(0, 'LineNr', { fg = 'white' })
+vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#778899' })
 vim.opt.number = true
 vim.opt.relativenumber = true
 
 --telescope
-vim.api.nvim_set_hl(0, "TelescopeBorder", { fg='#303030', bg = "none" })
-vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg='#303030', bg = "none" })
-vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { fg='#303030', bg = "none" })
-vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { fg='#303030', bg = "none" })
+vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = '#303030', bg = "none" })
+vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = '#303030', bg = "none" })
+vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { fg = '#303030', bg = "none" })
+vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { fg = '#303030', bg = "none" })
+
+--formatting
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function()
+    -- Run formatting for all file types
+    require("conform").format({ timeout_ms = 500, lsp_format = "fallback" })
+
+    -- Run organize imports only for JS/TS files
+    local filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" }
+    if vim.tbl_contains(filetypes, vim.bo.filetype) then
+      vim.lsp.buf.code_action({
+        context = { only = { "source.organizeImports" } },
+        apply = true
+      })
+    end
+  end,
+})
