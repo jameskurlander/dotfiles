@@ -42,6 +42,7 @@ return {
         },
       },
     })
+    });
     lspconfig.ts_ls.setup({});
 
     --lua

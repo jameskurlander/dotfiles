@@ -30,5 +30,9 @@ if [ -n "$playback_info" ]; then
     symbol='■'
   fi
 
-  echo "$symbol $artist - $album ($year) - $song"
+  if [ "$song" = "null" ]; then
+    echo "No music! (┘◉Д◉)┘ 彡 ┻━┻"
+  else
+    echo "$symbol $artist - $album ($year) - $song"
+  fi
 fi

@@ -78,3 +78,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end
   end,
 })
+vim.api.nvim_set_hl(0, "TelescopeBorder", { fg='#303030', bg = 'none' })
+vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg='#303030', bg = 'none' })
+vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { fg='#303030', bg = 'none' })
+vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { fg='#303030', bg = 'none' })
+
+--nvim-cmp
+vim.api.nvim_set_hl(0, "FloatBorder", { fg = '#303030', bg = 'none' })
