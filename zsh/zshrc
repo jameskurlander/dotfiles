@@ -1,9 +1,10 @@
 source $ZSH/oh-my-zsh.sh
 
-echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
-echo 'export PATH="$NVM_DIR/bin:$PATH"' >> ~/.zshrc
-echo '[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"' >> ~/.zshrc
-echo '[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.zshrc
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+export PATH="$NVM_DIR/bin:$PATH"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="false"
@@ -40,14 +41,5 @@ bindkey '^D' kill-whole-line
 # start_idle_timer
 
 eval $(thefuck --alias f)
-export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export NVM_DIR="$HOME/.nvm"
-export PATH="$NVM_DIR/bin:$PATH"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-export NVM_DIR="$HOME/.nvm"
-export PATH="$NVM_DIR/bin:$PATH"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"

@@ -1,6 +1,14 @@
 font-family = Berkeley Mono
 font-size = 18
-
 cursor-style = block
-fullscreen = true
 theme = Aura
+
+fullscreen = true
+
+working-directory = "~/Repos/"
+mouse-hide-while-typing = true
+quit-after-last-window-closed = true
+shell-integration = zsh
+clipboard-read = allow
+clipboard-write = allow
+macos-titlebar-style = hidden
