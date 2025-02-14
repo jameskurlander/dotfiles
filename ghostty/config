@@ -5,7 +5,7 @@ theme = Aura
 
 fullscreen = true
 
-working-directory = "~/Repos/"
+working-directory = "users/james/repos/"
 mouse-hide-while-typing = true
 quit-after-last-window-closed = true
 shell-integration = zsh
