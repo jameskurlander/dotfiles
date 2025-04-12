@@ -5,6 +5,22 @@ return {
     require('telescope').setup({
       defaults = {
         -- winblend = 5,
+        file_ignore_patterns = {
+          ".git/",
+          "node_modules/",
+          "vendor/",
+          "target/",
+          "%.jpg",
+          "%.jpeg",
+          "%.png",
+          "%.gif",
+          "%.webp",
+          "%.zip",
+          "%.tar",
+          "%.gz",
+          "%.bz2",
+          "%.xz",
+        },
         disable_devicons = false,
         vimgrep_arguments = {
           "rg",
