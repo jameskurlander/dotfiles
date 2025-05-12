@@ -4,12 +4,12 @@ return {
 		local lspconfig = require("lspconfig")
 
 		--bash
-		lspconfig.bashls.setup({})
+		vim.lsp.enable("bashls")
 		-- lspconfig.shfmt.setup({});
 		-- lspconfig.shellcheck.setup({});
 
 		--javascript, typescript, jsx, tsx, json, css, graphql, html
-		lspconfig.biome.setup({
+		vim.lsp.enable("biome", {
 			cmd = { "biome", "lsp-proxy" },
 			filetypes = {
 				"astro",
@@ -28,10 +28,11 @@ return {
 			root_dir = lspconfig.util.root_pattern("biome.json", "biome.jsonc"),
 			single_file_support = false,
 		})
-		lspconfig.cssls.setup({})
-		lspconfig.graphql.setup({})
-		lspconfig.html.setup({})
-		lspconfig.tailwindcss.setup({
+
+		vim.lsp.enable("cssls")
+		vim.lsp.enable("graphql")
+		vim.lsp.enable("html")
+		vim.lsp.enable("tailwindcss", {
 			settings = {
 				tailwindCSS = {
 					experimental = {
@@ -42,10 +43,10 @@ return {
 				},
 			},
 		})
-		lspconfig.ts_ls.setup({})
+		vim.lsp.enable("ts_ls")
 
 		--lua
-		lspconfig.lua_ls.setup({
+		vim.lsp.enable("lua_ls", {
 			settings = {
 				Lua = {
 					diagnostics = {
@@ -59,12 +60,12 @@ return {
 
 		--php
 		-- lspconfig.blade_formatter.setup({});
-		lspconfig.intelephense.setup({})
-		lspconfig.phpactor.setup({
+		vim.lsp.enable("intelephense")
+		vim.lsp.enable("phpactor", {
 			filetypes = { "php", "blade" },
 		})
 
 		--other
-		lspconfig.typos_lsp.setup({})
+		vim.lsp.enable("typos_lsp")
 	end,
 }
