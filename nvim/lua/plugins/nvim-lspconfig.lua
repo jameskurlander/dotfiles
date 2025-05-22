@@ -5,8 +5,8 @@ return {
 
 		--bash
 		vim.lsp.enable("bashls")
-		-- lspconfig.shfmt.setup({});
-		-- lspconfig.shellcheck.setup({});
+		vim.lsp.enable("shfmt")
+		vim.lsp.enable("shellcheck")
 
 		--javascript, typescript, jsx, tsx, json, css, graphql, html
 		vim.lsp.enable("biome", {
@@ -55,11 +55,11 @@ return {
 				},
 			},
 		})
-		-- lspconfig.luacheck.setup({});
-		-- lspconfig.stylua.setup({});
+		-- vim.lsp.enable("luacheck")
+		-- vim.lsp.enable("stylua")
 
 		--php
-		-- lspconfig.blade_formatter.setup({});
+		-- vim.lsp.enable("blade_formatter");
 		vim.lsp.enable("intelephense")
 		vim.lsp.enable("phpactor", {
 			filetypes = { "php", "blade" },
