@@ -1,6 +1,7 @@
 font-family = Berkeley Mono
 font-size = 18
 cursor-style = block
+# theme = tokyonight_night
 theme = Aura
 
 fullscreen = true
