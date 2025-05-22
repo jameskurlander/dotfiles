@@ -19,7 +19,7 @@ In your home directory (`~`) create a file called `.zshenv` which defines a vari
 Before running the following script, I'd recommend checking out the packages listed in `homebrew/Brewfile.work` and `homebrew/Brewfile.personal`. Remove anything you're not interested in using, and any additional packages you'd like to be managed via Homebrew here.
 
 Here's a brief overview of the tools I find most useful:
-- [btop](https://github.com/aristocratos/btop) - Process monitor
+- [btop](https://github.com/aristocratos/btop) - Nifty process monitor. Good for closing rogue processes
 - [gitmux](https://github.com/arl/gitmux) - Great for seeing your git status at a glance in the tmux status bar
 - [harlequin](https://github.com/tconbeer/harlequin) - Really neat terminal-based SQL IDE so you can maintain your flow when working with databases
 - [httpie](https://github.com/httpie/cli) - An HTTP client, great for testing API's (similar to PostMan)
