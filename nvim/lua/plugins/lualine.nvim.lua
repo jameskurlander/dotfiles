@@ -25,6 +25,7 @@ return {
             separator = { left = '', right = '' },
             icon_only = true,
             padding = { left = 1 },
+            color = { bg = 'none' }
           },
         },
         lualine_c = {
@@ -47,6 +48,7 @@ return {
             'progress',
             separator = { left = '' },
             padding = { left = 1, right = 1 },
+            color = { bg = 'none' }
           }
         },
         lualine_z = {
