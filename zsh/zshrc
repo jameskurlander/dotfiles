@@ -1,6 +1,7 @@
 source $ZSH/oh-my-zsh.sh
 
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 export PATH="$NVM_DIR/bin:$PATH"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
