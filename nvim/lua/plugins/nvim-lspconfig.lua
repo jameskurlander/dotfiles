@@ -10,6 +10,8 @@ return {
 
     -- c, c++
     vim.lsp.enable("clangd")
+    vim.lsp.enable("clang-format")
+    vim.lsp.enable("cpplint")
 
     --javascript, typescript, jsx, tsx, json, css, graphql, html
     vim.lsp.enable("biome", {
