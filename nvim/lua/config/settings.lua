@@ -1,6 +1,6 @@
 -- theme (must be at top to maintain highlight overrides)
 -- vim.cmd.colorscheme("moonfly")
-vim.cmd.colorscheme('tokyonight-night')
+vim.cmd.colorscheme("tokyonight-night")
 vim.opt.termguicolors = true
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
@@ -56,13 +56,16 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- telescope
-vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#303030", bg = "none" })
-vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = "#303030", bg = "none" })
-vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { fg = "#303030", bg = "none" })
-vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { fg = "#303030", bg = "none" })
+-- vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#73daca", bg = "none" })
+-- vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = "#73daca", bg = "none" })
+-- vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { fg = "#73daca", bg = "none" })
+-- vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { fg = "#73daca", bg = "none" })
+-- vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { fg = "white", bg = "none" })
 
 -- nvim-cmp
+vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
 vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#303030", bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 -- formatting
 vim.api.nvim_create_autocmd("BufWritePre", {

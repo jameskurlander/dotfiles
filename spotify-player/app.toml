@@ -14,7 +14,6 @@ page_size_in_rows = 20
 play_icon = "▶"
 pause_icon = "⏸"
 liked_icon = "+"
-border_type = "Rounded"
 progress_bar_type = "Rectangle"
 cover_img_scale = 1.0
 enable_media_control = true
