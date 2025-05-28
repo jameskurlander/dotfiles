@@ -22,6 +22,10 @@ return {
 
 		telescope.setup({
 			defaults = {
+				sorting_strategy = "ascending",
+				prompt_title = "",
+				results_title = "",
+				preview_title = "hello ",
 				file_ignore_patterns = {
 					".git/",
 					"node_modules/",
@@ -71,7 +75,7 @@ return {
 					horizontal = {
 						size = {
 							width = "100%",
-							height = "99%",
+							height = "100%",
 						},
 					},
 					vertical = {
@@ -84,38 +88,38 @@ return {
 				create_layout = function(picker)
 					local border = {
 						results = {
-							top_left = "┌",
-							top = "─",
-							top_right = "┬",
-							right = "│",
-							bottom_right = "",
-							bottom = "",
-							bottom_left = "",
-							left = "│",
+							top_left = " ",
+							top = " ",
+							top_right = " ",
+							right = " ",
+							bottom_right = " ",
+							bottom = " ",
+							bottom_left = " ",
+							left = " ",
 						},
 						results_patch = {
 							minimal = {
-								top_left = "┌",
-								top_right = "┐",
+								top_left = " ",
+								top_right = " ",
 							},
 							horizontal = {
-								top_left = "┌",
-								top_right = "┬",
+								top_left = " ",
+								top_right = " ",
 							},
 							vertical = {
-								top_left = "├",
-								top_right = "┤",
+								top_left = " ",
+								top_right = " ",
 							},
 						},
 						prompt = {
-							top_left = "├",
-							top = "─",
-							top_right = "┤",
-							right = "│",
-							bottom_right = "┘",
+							top_left = " ",
+							top = " ",
+							top_right = " ",
+							right = " ",
+							bottom_right = " ",
 							bottom = "─",
-							bottom_left = "└",
-							left = "│",
+							bottom_left = " ",
+							left = " ",
 						},
 						prompt_patch = {
 							minimal = {
@@ -204,10 +208,10 @@ return {
 						}, { dir = "col" }),
 						horizontal = Layout.Box({
 							Layout.Box({
-								Layout.Box(results, { grow = 1 }),
 								Layout.Box(prompt, { size = 3 }),
-							}, { dir = "col", size = "50%" }),
-							Layout.Box(preview, { size = "50%" }),
+								Layout.Box(results, { grow = 1 }),
+							}, { dir = "col", size = "40%" }),
+							Layout.Box(preview, { size = "60%" }),
 						}, { dir = "row" }),
 						minimal = Layout.Box({
 							Layout.Box(results, { grow = 1 }),

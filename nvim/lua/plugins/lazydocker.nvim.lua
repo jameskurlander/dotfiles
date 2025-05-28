@@ -4,16 +4,8 @@ return {
 	config = function()
 		require("lazydocker").setup({
 			border = "single",
+			theme = {},
 		})
 	end,
 	event = "BufRead",
-	keys = {
-		{
-			"<leader>ld",
-			function()
-				require("lazydocker").open()
-			end,
-			desc = "Open Lazydocker floating window",
-		},
-	},
 }

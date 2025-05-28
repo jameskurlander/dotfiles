@@ -1,7 +1,10 @@
 local settings = { noremap = true, silent = true }
 
 -- LazyGit
-vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", settings)
+vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", settings)
+
+-- LazyDocker
+vim.keymap.set("n", "<leader>ld", ":Lazydocker<CR>", settings)
 
 -- Vim
 vim.keymap.set("n", "<leader>th", ":set hlsearch!<CR>", settings)
@@ -14,6 +17,9 @@ vim.keymap.set("n", "<leader>df", function()
 		border = "single",
 	})
 end, settings)
+
+-- UndoTree
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, settings)
 
 -- Vim-Fugitive
 vim.keymap.set("n", "<leader>gb", ":Git blame<CR>", settings)
