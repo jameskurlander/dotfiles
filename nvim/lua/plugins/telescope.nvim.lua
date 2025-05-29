@@ -70,13 +70,13 @@ return {
         layout_config = {
           full = {
             size = {
-              width = "90%",
-              height = "90%",
+              width = "100%",
+              height = "95%",
             },
           },
           mini = {
             size = {
-              width = "90%",
+              width = "100%",
               height = "90%",
             },
           },
@@ -159,7 +159,7 @@ return {
           local function get_box()
             local width = vim.o.columns
 
-            if width < 200 then
+            if width < 100 then
               return box_by_kind["mini"], "mini"
             end
 
