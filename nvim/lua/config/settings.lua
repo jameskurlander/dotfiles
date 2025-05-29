@@ -85,3 +85,10 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.keymap.set("n", "<CR>", "<CR>:cclose<CR>", { buffer = true, silent = true })
   end,
 })
+
+-- adds border to diagnostic window (<leader>df)
+vim.diagnostic.config({
+  float = {
+    border = "single",
+  },
+})
