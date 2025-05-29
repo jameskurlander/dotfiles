@@ -35,17 +35,17 @@ vim.opt.tabstop = 2
 
 -- commenting
 vim.filetype.get_option = function(filetype, option)
-	return option == "commentstring" and require("ts_context_commentstring.internal").calculate_commentstring()
-		or vim.filetype.get_option(filetype, option)
+  return option == "commentstring" and require("ts_context_commentstring.internal").calculate_commentstring()
+      or vim.filetype.get_option(filetype, option)
 end
 
 -- buffer separator
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#303030", bg = "none" })
 vim.opt.fillchars:append({
-	eob = " ",
-	vert = "│",
-	horiz = "─",
+  eob = " ",
+  vert = "│",
+  horiz = "─",
 })
 
 -- line numbers
@@ -58,32 +58,30 @@ vim.opt.relativenumber = true
 -- highlighting modifications
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
-vim.api.nvim_set_hl(0, "TelescopePromptTitle", { bg = "none" })
 vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#303030", bg = "none" })
-vim.api.nvim_set_hl(0, "LazyGitBorder", { fg = "#303030", bg = "none" })
 
 -- formatting
 vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function()
-		-- run formatting for all file types
-		require("conform").format({ timeout_ms = 500, lsp_format = "fallback" })
+  pattern = "*",
+  callback = function()
+    -- run formatting for all file types
+    require("conform").format({ timeout_ms = 500, lsp_format = "fallback" })
 
-		-- run organize imports only for JS/TS files
-		local filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" }
-		if vim.tbl_contains(filetypes, vim.bo.filetype) then
-			vim.lsp.buf.code_action({
-				context = { only = { "source.organizeImports" } },
-				apply = true,
-			})
-		end
-	end,
+    -- run organize imports only for JS/TS files
+    local filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" }
+    if vim.tbl_contains(filetypes, vim.bo.filetype) then
+      vim.lsp.buf.code_action({
+        context = { only = { "source.organizeImports" } },
+        apply = true,
+      })
+    end
+  end,
 })
 
 -- auto-close quickfix/gd buffer
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "qf",
-	callback = function()
-		vim.keymap.set("n", "<CR>", "<CR>:cclose<CR>", { buffer = true, silent = true })
-	end,
+  pattern = "qf",
+  callback = function()
+    vim.keymap.set("n", "<CR>", "<CR>:cclose<CR>", { buffer = true, silent = true })
+  end,
 })
