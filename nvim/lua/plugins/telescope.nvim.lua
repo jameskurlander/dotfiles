@@ -21,6 +21,9 @@ return {
 
 		telescope.setup({
 			defaults = {
+				preview = {
+					msg_bg_fillchar = "¿?",
+				},
 				sorting_strategy = "ascending",
 				disable_devicons = false,
 				file_ignore_patterns = {
