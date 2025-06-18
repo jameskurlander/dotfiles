@@ -3,9 +3,6 @@
 playback_info=$(spotify_player get key playback)
 
 if [ -n "$playback_info" ]; then
-  symbol=''
-  shuffle_state=$(echo "$playback_info" |
-    jq -r '.shuffle_state')
   artist=$(echo "$playback_info" |
     jq -r '.item.artists[0].name')
   album=$(echo "$playback_info" |
@@ -20,19 +17,9 @@ if [ -n "$playback_info" ]; then
   repeat_state=$(echo "$playback_info" |
     jq -r '.repeat_state')
 
-  if [ "$is_playing" = "true" ]; then
-    if [ "$shuffle_state" = true ]; then
-      symbol='▶'
-    else
-      symbol='▷'
-    fi
-  else
-    symbol='■'
-  fi
-
   if [ "$song" = "null" ]; then
     echo "No music! (┘◉Д◉)┘ 彡 ┻━┻"
   else
-    echo "$symbol $artist - $album ($year) - $song"
+    echo "$artist - $album ($year) - $song"
   fi
 fi

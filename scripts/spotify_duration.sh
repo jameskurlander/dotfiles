@@ -14,5 +14,5 @@ if [ -n "$playback_info" ]; then
   progress_formatted=$(printf "%d:%02d" $progress_min $progress_sec)
   duration_formatted=$(printf "%d:%02d" $duration_min $duration_sec)
 
-  echo "[$progress_formatted / $duration_formatted]"
+  echo "$progress_formatted / $duration_formatted"
 fi
