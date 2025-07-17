@@ -8,6 +8,12 @@ prSections:
 - title: Involved
   filters: is:open involves:@me -author:@me
   type: null
+- title: Open
+  filters: is:open repo:fortunemedia/fortune-frontend
+  type: null
+- title: Closed
+  filters: is:closed repo:fortunemedia/fortune-frontend
+  type: null
 issuesSections:
 - title: My Issues
   filters: is:open author:@me
@@ -21,7 +27,7 @@ repo:
 defaults:
   preview:
     open: true
-    width: 50
+    width: 100
   prsLimit: 20
   issuesLimit: 20
   view: prs
@@ -57,7 +63,9 @@ keybindings:
   issues: []
   prs: []
   branches: []
-repoPaths: {}
+repoPaths: {
+  fortunemedia/fortune-frontend: ~/repos/fortune-frontend
+}
 theme:
   ui:
     sectionsShowCount: true
