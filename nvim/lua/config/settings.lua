@@ -12,7 +12,7 @@ vim.opt.incsearch = true
 vim.opt.smartcase = false
 
 -- for hiding/showing obsidan markdown
-vim.opt.conceallevel = 0
+vim.opt.conceallevel = 1
 
 -- general
 vim.opt.clipboard = "unnamedplus"
