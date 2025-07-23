@@ -66,8 +66,14 @@ vim.keymap.set("n", "<leader>orr", ":Octo review resume<CR>", settings)
 vim.keymap.set("n", "<leader>ord", ":Octo review discard<CR>", settings)
 vim.keymap.set("n", "<leader>orp", ":Octo review comments<CR>", settings)
 vim.keymap.set("n", "<leader>orc", ":Octo review close<CR>", settings)
+
 vim.keymap.set("n", "<leader>oca", ":Octo comment add<CR>", settings)
 vim.keymap.set("n", "<leader>ocd", ":Octo comment delete<CR>", settings)
+vim.keymap.set("n", "<leader>ocn", ":Octo unresolve<CR>", settings)
+vim.keymap.set("n", "<leader>ocp", ":Octo thread unresolve<CR>", settings)
+
+vim.keymap.set("n", "<leader>otr", ":Octo thread resolve<CR>", settings)
+vim.keymap.set("n", "<leader>otu", ":Octo thread unresolve<CR>", settings)
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
