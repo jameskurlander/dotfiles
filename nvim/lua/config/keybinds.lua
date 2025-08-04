@@ -50,8 +50,8 @@ vim.keymap.set("n", "<leader>fc", builtin.git_commits, {})
 -- LSP
 vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<space>df", vim.diagnostic.open_float)
-vim.keymap.set("n", "<space>dl", vim.diagnostic.setloclist)
+vim.keymap.set("n", "<leader>df", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist)
 vim.diagnostic.config({
 	virtual_text = true,
 	underline = false,
@@ -89,12 +89,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, opts)
 		-- vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-		vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, opts)
-		vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, opts)
-		vim.keymap.set("n", "<space>wl", function()
+		vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
+		vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
+		vim.keymap.set("n", "<leader>wl", function()
 			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 		end, opts)
-		vim.keymap.set("n", "<space>f", function()
+		vim.keymap.set("n", "<leader>f", function()
 			vim.lsp.buf.format({ async = true })
 		end, opts)
 	end,
