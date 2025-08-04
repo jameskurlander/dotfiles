@@ -1,6 +1,6 @@
 -- theme (must be at top to maintain highlight overrides)
--- vim.cmd.colorscheme("moonfly")
-vim.cmd.colorscheme("tokyonight-night")
+vim.cmd.colorscheme("moonlight")
+-- vim.cmd.colorscheme("tokyonight-night")
 vim.opt.termguicolors = true
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
@@ -53,7 +53,7 @@ vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#778899" })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "white" })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#778899" })
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- highlighting modifications
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
