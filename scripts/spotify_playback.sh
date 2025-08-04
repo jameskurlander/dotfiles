@@ -17,7 +17,7 @@ if [ -n "$playback_info" ]; then
   repeat_state=$(echo "$playback_info" |
     jq -r '.repeat_state')
 
-  if [ "$song" = "null" ]; then
+  if [ "$song" = "null" || "$song" = "" ]; then
     echo "No music! (┘◉Д◉)┘ 彡 ┻━┻"
   else
     echo "$artist - $album ($year) - $song"

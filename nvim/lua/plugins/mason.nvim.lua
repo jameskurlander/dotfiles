@@ -29,7 +29,7 @@ return {
 				"clangd",
 
 				--javascript, typescript, jsx, tsx, json, css, graphql, html
-				"biome",
+				-- "biome",
 				"cssls",
 				"graphql",
 				"html",
