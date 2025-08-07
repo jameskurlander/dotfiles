@@ -61,22 +61,22 @@ vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
 vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#303030", bg = "none" })
 
 -- formatting
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function()
-		-- run formatting for all file types
-		require("conform").format({ timeout_ms = 500, lsp_format = "fallback" })
-
-		-- run organize imports only for JS/TS files
-		local filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" }
-		if vim.tbl_contains(filetypes, vim.bo.filetype) then
-			vim.lsp.buf.code_action({
-				context = { only = { "source.organizeImports" } },
-				apply = true,
-			})
-		end
-	end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		-- run formatting for all file types
+-- 		require("conform").format({ timeout_ms = 500, lsp_format = "fallback" })
+--
+-- 		-- run organize imports only for JS/TS files
+-- 		local filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" }
+-- 		if vim.tbl_contains(filetypes, vim.bo.filetype) then
+-- 			vim.lsp.buf.code_action({
+-- 				context = { only = { "source.organizeImports" } },
+-- 				apply = true,
+-- 			})
+-- 		end
+-- 	end,
+-- })
 
 -- auto-close quickfix/gd buffer
 vim.api.nvim_create_autocmd("FileType", {
