@@ -35,17 +35,17 @@ vim.opt.tabstop = 2
 
 -- commenting
 vim.filetype.get_option = function(filetype, option)
-	return option == "commentstring" and require("ts_context_commentstring.internal").calculate_commentstring()
-		or vim.filetype.get_option(filetype, option)
+  return option == "commentstring" and require("ts_context_commentstring.internal").calculate_commentstring()
+      or vim.filetype.get_option(filetype, option)
 end
 
 -- buffer separator
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#303030", bg = "none" })
 vim.opt.fillchars:append({
-	eob = " ",
-	vert = "│",
-	horiz = "─",
+  eob = " ",
+  vert = "│",
+  horiz = "─",
 })
 
 -- line numbers
@@ -80,15 +80,15 @@ vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#303030", bg = "none" })
 
 -- auto-close quickfix/gd buffer
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "qf",
-	callback = function()
-		vim.keymap.set("n", "<CR>", "<CR>:cclose<CR>", { buffer = true, silent = true })
-	end,
+  pattern = "qf",
+  callback = function()
+    vim.keymap.set("n", "<CR>", "<CR>:cclose<CR>", { buffer = true, silent = true })
+  end,
 })
 
 -- adds border to diagnostic window (<leader>df)
 vim.diagnostic.config({
-	float = {
-		border = "single",
-	},
+  float = {
+    border = "single",
+  },
 })
