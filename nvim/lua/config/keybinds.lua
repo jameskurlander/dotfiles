@@ -7,7 +7,6 @@ vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", settings)
 vim.keymap.set("n", "<leader>ld", ":Lazydocker<CR>", settings)
 
 -- Vim
-vim.keymap.set("n", "<leader>th", ":set hlsearch!<CR>", settings)
 vim.keymap.set("n", "<leader>w", ":wa!<CR>", settings)
 vim.keymap.set("n", "<leader>q", ":qa!<CR>", settings)
 vim.keymap.set("n", "<leader>df", function()
