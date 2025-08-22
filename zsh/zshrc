@@ -41,6 +41,13 @@ bindkey '^D' kill-whole-line
 #
 # start_idle_timer
 
-eval $(thefuck --alias f)
+alias e="eza --long --icons --group-directories-last --no-user"
+alias ea="eza --long --icons --group-directories-last --no-user"
+alias speedtest="speedtest-cli"
+alias spotify="spotify_player"
+alias f="thefuck"
+
+eval "$(zoxide init zsh)"
+
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

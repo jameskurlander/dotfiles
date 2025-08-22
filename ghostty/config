@@ -3,6 +3,11 @@ font-size = 18
 cursor-style = block
 # theme = tokyonight-storm
 theme = Aura
+# custom-shader = ./ghostty-shaders/retro-terminal.glsl
+# custom-shader = ./ghostty-shaders/bloom.glsl
+# custom-shader = ./ghostty-shaders/tft.glsl
+# custom-shader = ./ghostty-shaders/glitchy.glsl
+macos-icon = "xray"
 
 fullscreen = true
 
