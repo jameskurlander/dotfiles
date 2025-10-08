@@ -9,7 +9,6 @@ export PATH="$NVM_DIR/bin:$PATH"
 
 DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="false"
-PROMPT_DIRTRIM=3
 
 zstyle ':omz:update' mode auto
 

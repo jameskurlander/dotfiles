@@ -20,8 +20,8 @@ return {
       ensure_installed = {
         --bash
         "bashls",
-        'shfmt',
-        'shellcheck',
+        -- "shfmt",
+        -- "shellcheck",
 
         -- c, c++
         "clangd",
@@ -35,11 +35,11 @@ return {
 
         --lua
         "lua_ls",
-        'luacheck',
-        'stylua',
+        -- "luacheck",
+        "stylua",
 
         --php
-        'blade-formatter',
+        -- "blade-formatter",
         "intelephense",
         "phpactor",
 
