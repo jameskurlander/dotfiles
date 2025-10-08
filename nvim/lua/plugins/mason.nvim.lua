@@ -1,9 +1,8 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason-lspconfig.nvim",
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason.nvim",
     "neovim/nvim-lspconfig",
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
   },
   config = function()
     require("mason").setup({
@@ -18,31 +17,29 @@ return {
     })
 
     require("mason-lspconfig").setup({
-      automatic_installation = true,
       ensure_installed = {
         --bash
         "bashls",
-        -- 'shfmt',
-        -- 'shellcheck',
+        'shfmt',
+        'shellcheck',
 
         -- c, c++
         "clangd",
 
         --javascript, typescript, jsx, tsx, json, css, graphql, html
-        -- "biome",
-        -- "cssls",
+        "biome",
+        "cssls",
         "graphql",
         "html",
         "tailwindcss",
-        "ts_ls",
 
         --lua
         "lua_ls",
-        -- 'luacheck',
-        -- 'stylua',
+        'luacheck',
+        'stylua',
 
         --php
-        -- 'blade-formatter',
+        'blade-formatter',
         "intelephense",
         "phpactor",
 
