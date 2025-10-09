@@ -58,6 +58,7 @@ vim.opt.number = true
 -- highlighting modifications
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
+vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg = "none" })
 vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#303030", bg = "none" })
 vim.o.winborder = 'single'
 
