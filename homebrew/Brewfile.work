@@ -1,6 +1,7 @@
 tap "arl/arl"
 tap "homebrew/services"
 
+brew "antidote"
 brew "bat"
 brew "btop"
 brew "circumflex"
