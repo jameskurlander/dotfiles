@@ -74,7 +74,7 @@ vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist)
 
 vim.diagnostic.config({
   virtual_text = true,
-  underline = true,
+  underline = false,
   signs = true,
   update_in_insert = false,
 })
