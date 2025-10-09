@@ -1,7 +1,6 @@
-source $ZSH/oh-my-zsh.sh
-
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
 export NVM_DIR="$HOME/.nvm"
 export PATH="$NVM_DIR/bin:$PATH"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
@@ -10,9 +9,8 @@ export PATH="$NVM_DIR/bin:$PATH"
 DISABLE_AUTO_TITLE="true"
 ENABLE_CORRECTION="false"
 
-zstyle ':omz:update' mode auto
-
-plugins=(git)
+setopt HIST_SAVE_NO_DUPS
+setopt INC_APPEND_HISTORY
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -29,25 +27,14 @@ bindkey '^H' backward-char
 bindkey '^L' forward-char
 bindkey '^D' kill-whole-line
 
-# function idle_trigger {
-#   eval "cmatrix -s -C red"
-#   zle reset-prompt
-# }
-#
-# function start_idle_timer {
-#   TMOUT=300
-#   TRAPALRM() { idle_trigger }
-# }
-#
-# start_idle_timer
-
 alias e="eza --long --icons --group-directories-last --no-user"
-alias ea="eza --long --icons --group-directories-last --no-user"
+alias ea="eza -all --long --icons --group-directories-last --no-user"
 alias speedtest="speedtest-cli"
 alias spotify="spotify_player"
 alias f="thefuck"
 
-eval "$(zoxide init zsh)"
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+zstyle ':antidote:bundle' use-cache yes
+antidote load
 
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(zoxide init zsh)"

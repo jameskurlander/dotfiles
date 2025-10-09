@@ -46,6 +46,11 @@ rm -rf "$HOME/.zshrc"
 ln -sf "$DOTFILES_DIR/zsh/zshrc" "$HOME/.zshrc"
 echo "Symlinked zsh config"
 
+# Symlink for zsh_plugins
+rm -rf "$HOME/.zsh_plugins.txt"
+ln -sf "$DOTFILES_DIR/zsh/zsh_plugins.txt" "$HOME/.zsh_plugins.txt"
+echo "Symlinked zsh plugins"
+
 # Symlink for neovim
 rm -rf "$HOME/.config/nvim"
 ln -sf "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
@@ -72,4 +77,4 @@ ln -sf "$DOTFILES_DIR/newsboat" "$HOME/.newsboat"
 echo "Symlinked newsboat config"
 
 # Refresh the terminal
-#reset
+reset
