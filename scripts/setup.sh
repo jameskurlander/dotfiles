@@ -26,7 +26,6 @@ fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install Homebrew packages
-brew tap homebrew/bundle
 brew bundle --file="$DOTFILES_DIR/homebrew/Brewfile.work"
 
 if [[ "$personal_flag" == true && -f "$DOTFILES_DIR/homebrew/Brewfile.personal" ]]; then
