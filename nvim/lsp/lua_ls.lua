@@ -91,7 +91,11 @@ return {
 				globals = { "vim" },
 			},
 			workspace = {
-				library = vim.api.nvim_get_runtime_file("", true),
+				library = vim.tbl_deep_extend(
+					"force",
+					vim.api.nvim_get_runtime_file("", true),
+					{ "${3rd}/luv/library" }
+				),
 				checkThirdParty = false,
 			},
 			telemetry = { enable = false },
