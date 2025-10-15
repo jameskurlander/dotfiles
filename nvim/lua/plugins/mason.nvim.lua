@@ -1,51 +1,52 @@
 return {
-	"mason-org/mason-lspconfig.nvim",
-	dependencies = {
-		"mason-org/mason.nvim",
-		"neovim/nvim-lspconfig",
-	},
-	config = function()
-		require("mason").setup({
-			ui = {
-				border = "single",
-				icons = {
-					package_installed = "✓",
-					package_pending = "➜",
-					package_uninstalled = "✗",
-				},
-			},
-		})
+  "mason-org/mason-lspconfig.nvim",
+  dependencies = {
+    "mason-org/mason.nvim",
+    "neovim/nvim-lspconfig",
+  },
+  config = function()
+    require("mason").setup({
+      ui = {
+        border = "single",
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗",
+        },
+      },
+    })
 
-		require("mason-lspconfig").setup({
-			ensure_installed = {
-				--bash
-				"bashls",
-				-- "shfmt",
-				-- "shellcheck",
+    require("mason-lspconfig").setup({
+      ensure_installed = {
+        --bash
+        "bashls",
+        -- "shfmt",
+        -- "shellcheck",
 
-				-- c, c++
-				"clangd",
+        -- c, c++
+        "clangd",
 
-				--javascript, typescript, jsx, tsx, json, css, graphql, html
-				"biome",
-				"cssls",
-				"graphql",
-				"html",
-				"tailwindcss",
+        --javascript, typescript, jsx, tsx, json, css, graphql, html
+        "biome",
+        "cssls",
+        "graphql",
+        "html",
+        "tailwindcss",
+        "ts_ls",
 
-				--lua
-				"lua_ls",
-				-- "luacheck",
-				-- "stylua",
+        --lua
+        "lua_ls",
+        -- "luacheck",
+        -- "stylua",
 
-				--php
-				-- "blade-formatter",
-				"intelephense",
-				"phpactor",
+        --php
+        -- "blade-formatter",
+        "intelephense",
+        "phpactor",
 
-				--other
-				"typos_lsp",
-			},
-		})
-	end,
+        --other
+        "typos_lsp",
+      },
+    })
+  end,
 }

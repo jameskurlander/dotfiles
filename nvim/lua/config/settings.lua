@@ -52,7 +52,7 @@ vim.opt.fillchars:append({
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#778899" })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "white" })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#778899" })
-vim.opt.number = true
+vim.opt.number = false
 -- vim.opt.relativenumber = true
 
 -- highlighting modifications
