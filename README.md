@@ -1,6 +1,6 @@
 # Dotfiles
 
-These are my dotfiles! Mine, but they can also be yours! Here's how:
+These are my dotfiles... mine, but they can also be yours! Here's how:
 
 ### Clone The Repo
 
