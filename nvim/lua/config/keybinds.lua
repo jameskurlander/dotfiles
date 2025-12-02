@@ -97,3 +97,34 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, opts)
   end,
 })
+
+local opencode = require("opencode")
+
+function OpencodeAsk()
+  opencode.ask("@this: ", { submit = true })
+end
+
+function OpencodePageUp()
+  opencode.command("session.half.page.up")
+end
+
+function OpencodePageDown()
+  opencode.command("session.half.page.down")
+end
+
+function OpencodeSelect()
+  opencode.prompt("@this")
+end
+
+function OpencodeToggle()
+  opencode.toggle()
+end
+
+-- Opencode
+vim.keymap.set({ "n", "x" }, "<leader>aa", OpencodeAsk, { desc = "Ask opencode" })
+vim.keymap.set({ "n", "x" }, "<leader>ae", OpencodeSelect, { desc = "Execute opencode action" })
+vim.keymap.set({ "n", "t" }, "<leader>at", OpencodeToggle, { desc = "Toggle opencode" })
+vim.keymap.set("n", "<S-C-U", OpencodePageUp, { desc = "Scroll opencode half page up" })
+vim.keymap.set("n", "<S-C-D", OpencodePageDown, { desc = "Scroll opencode half page down" })
+vim.keymap.set('n', '+', '<C-a>', { desc = 'Increment', noremap = true })
+vim.keymap.set('n', '-', '<C-x>', { desc = 'Decrement', noremap = true })
