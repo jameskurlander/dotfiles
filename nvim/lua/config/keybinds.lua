@@ -121,10 +121,10 @@ function OpencodeToggle()
 end
 
 -- Opencode
-vim.keymap.set({ "n", "x" }, "<leader>aa", OpencodeAsk, { desc = "Ask opencode" })
-vim.keymap.set({ "n", "x" }, "<leader>ae", OpencodeSelect, { desc = "Execute opencode action" })
-vim.keymap.set({ "n", "t" }, "<leader>at", OpencodeToggle, { desc = "Toggle opencode" })
-vim.keymap.set("n", "<S-C-U", OpencodePageUp, { desc = "Scroll opencode half page up" })
-vim.keymap.set("n", "<S-C-D", OpencodePageDown, { desc = "Scroll opencode half page down" })
-vim.keymap.set('n', '+', '<C-a>', { desc = 'Increment', noremap = true })
-vim.keymap.set('n', '-', '<C-x>', { desc = 'Decrement', noremap = true })
+-- vim.keymap.set({ "n", "x" }, "<leader>aa", OpencodeAsk, { desc = "Ask opencode" })
+-- vim.keymap.set({ "n", "x" }, "<leader>ae", OpencodeSelect, { desc = "Execute opencode action" })
+-- vim.keymap.set({ "n", "t" }, "<leader>at", OpencodeToggle, { desc = "Toggle opencode" })
+-- vim.keymap.set("n", "<S-C-U", OpencodePageUp, { desc = "Scroll opencode half page up" })
+-- vim.keymap.set("n", "<S-C-D", OpencodePageDown, { desc = "Scroll opencode half page down" })
+-- vim.keymap.set('n', '+', '<C-a>', { desc = 'Increment', noremap = true })
+-- vim.keymap.set('n', '-', '<C-x>', { desc = 'Decrement', noremap = true })

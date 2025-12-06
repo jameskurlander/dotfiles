@@ -162,7 +162,7 @@ return {
           local function get_box()
             local width = vim.o.columns
 
-            if width < 100 then
+            if width < 120 then
               return box_by_kind["mini"], "mini"
             end
 
