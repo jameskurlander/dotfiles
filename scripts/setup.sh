@@ -35,6 +35,11 @@ else
   echo "Brewfile.personal not found in dotfiles directory."
 fi
 
+# Symlink for opencod 
+rm -f "$HOME/.config/opencode/opencode.jsonc"
+ln -s "$DOTFILES_DIR/opencode/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"
+echo "Symlinked opencode config"
+
 # Symlink for ghostty
 rm -rf "$HOME/.config/ghostty"
 ln -sf "$DOTFILES_DIR/ghostty" "$HOME/.config/ghostty"

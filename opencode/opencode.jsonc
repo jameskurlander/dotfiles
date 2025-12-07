@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "aura",
+  "model": "anthropic/claude-sonnet-4-5",
+  "autoupdate": true,
+  "keybinds": {
+    "command_list": "ctrl+s"
+  }
+}
+
