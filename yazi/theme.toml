@@ -20,12 +20,5 @@ permissions_w = { fg = "green" }
 permissions_x = { fg = "green" }
 permissions_s = { fg = "green" }
 
-[icon]
-globs = []
-dirs  = []
-files = []
-exts  = []
-conds = []
-
 [mgr]
 cwd = { fg = "green" }
