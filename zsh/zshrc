@@ -20,6 +20,15 @@ fi
 
 PS1="%F{green}%D{%H:%M:%S} %F{green}%~ %F{green}→ %f"
 
+# changes cwd when exiting yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
 bindkey '^ ' autosuggest-accept
 bindkey '^J' down-line-or-search
 bindkey '^K' up-line-or-search
