@@ -30,11 +30,6 @@ function y() {
 }
 
 bindkey '^ ' autosuggest-accept
-bindkey '^J' down-line-or-search
-bindkey '^K' up-line-or-search
-bindkey '^H' backward-char
-bindkey '^L' forward-char
-bindkey '^D' kill-whole-line
 
 alias e="eza --long --icons --group-directories-last --no-user"
 alias ea="eza -all --long --icons --group-directories-last --no-user"
