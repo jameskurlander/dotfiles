@@ -4,7 +4,7 @@
   "model": "anthropic/claude-sonnet-4-5",
   "autoupdate": true,
   "keybinds": {
-    "command_list": "ctrl+s"
+    "command_list": "ctrl+s",
   }
 }
 
