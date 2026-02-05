@@ -53,7 +53,6 @@ vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#778899" })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "white" })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#778899" })
 vim.opt.number = false
--- vim.opt.relativenumber = true
 
 -- highlighting modifications
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -61,24 +60,6 @@ vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
 vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { bg = "none" })
 vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#303030", bg = "none" })
 vim.o.winborder = 'single'
-
--- formatting
--- vim.api.nvim_create_autocmd("BufWritePre", {
--- 	pattern = "*",
--- 	callback = function()
--- 		-- run formatting for all file types
--- 		require("conform").format({ timeout_ms = 500, lsp_format = "fallback" })
---
--- 		-- run organize imports only for JS/TS files
--- 		local filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" }
--- 		if vim.tbl_contains(filetypes, vim.bo.filetype) then
--- 			vim.lsp.buf.code_action({
--- 				context = { only = { "source.organizeImports" } },
--- 				apply = true,
--- 			})
--- 		end
--- 	end,
--- })
 
 -- auto-close quickfix/gd buffer
 vim.api.nvim_create_autocmd("FileType", {
@@ -93,4 +74,11 @@ vim.diagnostic.config({
   float = {
     border = "single",
   },
+})
+
+-- Toggles autoformatting
+vim.api.nvim_create_user_command("FormatToggle", function()
+  vim.g.disable_autoformat = not vim.g.disable_autoformat
+end, {
+  desc = "Toggle autoformat-on-save",
 })
