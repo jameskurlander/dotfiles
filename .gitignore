@@ -3,3 +3,6 @@
 **/Session.vim
 /newsboat/cache.db
 /newsboat/cache.db.lock
+
+/ghostty/shaders/
+/ghostty/ghostty-shaders/

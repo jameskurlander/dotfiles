@@ -98,6 +98,10 @@ rm -rf "$HOME/.config/ghostty"
 ln -sf "$DOTFILES_DIR/ghostty" "$HOME/.config/ghostty"
 echo "${BLUE}Symlinked ghostty config${RESET}"
 
+# Install ghostty-cursor-shaders
+git clone https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
+echo "${GREEN}Installing ghostty-cursor-shaders...${RESET}"
+
 # Symlink for neovim
 rm -rf "$HOME/.config/nvim"
 ln -sf "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
