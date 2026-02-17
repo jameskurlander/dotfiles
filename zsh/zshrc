@@ -36,6 +36,7 @@ alias ea="eza -all --long --icons --group-directories-last --no-user"
 alias speedtest="speedtest-cli"
 alias spotify="spotify_player"
 alias f="thefuck"
+alias lg="lazygit"
 
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 zstyle ':antidote:bundle' use-cache yes
