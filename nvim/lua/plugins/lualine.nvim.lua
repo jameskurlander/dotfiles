@@ -58,7 +58,7 @@ return {
           {
             require("opencode").statusline,
             separator = { left = "", right = "" },
-            padding = { right = 2 }
+            padding = { left = 1, right = 2 }
           },
         },
         lualine_y = {
