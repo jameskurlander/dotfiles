@@ -51,6 +51,9 @@ return {
 				},
 				lualine_x = {
 					{
+						require("opencode").statusline,
+					},
+					{
 						"diagnostics",
 						separator = { left = "", right = "" },
 						padding = { left = 0, right = 0 },
