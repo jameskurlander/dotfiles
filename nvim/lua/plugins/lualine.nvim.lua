@@ -5,25 +5,11 @@ return {
   },
   lazy = false,
   config = function()
-    -- local function transparent_theme()
-    -- 	local theme = require("lualine.themes.auto") -- or any other base theme
-    --
-    -- 	for _, mode in pairs(theme) do
-    -- 		for section, hl in pairs(mode) do
-    -- 			hl.bg = "#15141b"
-    -- 		end
-    -- 	end
-    --
-    -- 	return theme
-    -- end
-
     require("lualine").setup({
       options = {
         icons_enabled = true,
         globalstatus = true,
         theme = "moonlight",
-        -- theme = "auto",
-        -- theme = transparent_theme(),
       },
       sections = {
         lualine_a = {
