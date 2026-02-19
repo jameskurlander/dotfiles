@@ -97,14 +97,6 @@ function OpencodeScrollBottom()
   opencode.command("session.last")
 end
 
-function OpencodeNewSession()
-  opencode.command("session.new")
-end
-
-function OpencodeListSessions()
-  opencode.command("session.list")
-end
-
 function OpencodeSelect()
   opencode.select()
 end
@@ -113,23 +105,12 @@ function OpencodeToggle()
   opencode.toggle()
 end
 
-vim.keymap.set({ "n", "x" }, "<leader>aa", OpencodeAsk, { desc = "Ask opencode" })
-
-function OpencodeDiagnostics()
-  require("opencode").ask("Show diagnostics for this file", { submit = true })
-end
-
-vim.keymap.set("n", "<leader>ad", OpencodeDiagnostics, { desc = "Opencode diagnostics" })
-vim.keymap.set({ "n", "x" }, "<leader>as", OpencodeSelect, { desc = "Select opencode action" })
-
-vim.keymap.set({ "n" }, "\\", OpencodeToggle, { desc = "Toggle opencode buffer" })
-
-vim.keymap.set({ "n" }, "<C-j>", OpencodePageDown, { desc = "Scroll opencode page down" })
-vim.keymap.set({ "n" }, "<C-k>", OpencodePageUp, { desc = "Scroll opencode page up" })
-vim.keymap.set({ "n" }, "<C-g>", OpencodeScrollBottom, { desc = "Scroll opencode to bottom" })
-
-vim.keymap.set("t", "<C-r>", OpencodeNewSession, { desc = "Start new opencode session" })
-vim.keymap.set("t", "<C-l>", OpencodeListSessions, { desc = "List opencode sessions" })
+vim.keymap.set("n", "\\", OpencodeToggle, { desc = "Toggle opencode buffer" })
+vim.keymap.set("n", "<leader>aa", OpencodeAsk, { desc = "Ask opencode" })
+vim.keymap.set("n", "<leader>as", OpencodeSelect, { desc = "Select opencode action" })
+vim.keymap.set("n", "<C-j>", OpencodePageDown, { desc = "Scroll opencode page down" })
+vim.keymap.set("n", "<C-k>", OpencodePageUp, { desc = "Scroll opencode page up" })
+vim.keymap.set("n", "<C-g>", OpencodeScrollBottom, { desc = "Scroll opencode to bottom" })
 
 -- Telescope
 local builtin = require("telescope.builtin")
@@ -145,6 +126,7 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, settings)
 -- Vim
 vim.keymap.set("n", "<leader>w", ":wa!<CR>", settings)
 vim.keymap.set("n", "<leader>q", ":qa!<CR>", settings)
+vim.keymap.set("n", "<leader>r", ":e!<CR>", settings)
 vim.keymap.set("n", "<leader>df", function()
   vim.diagnostic.open_float(nil, {
     scope = "line",
