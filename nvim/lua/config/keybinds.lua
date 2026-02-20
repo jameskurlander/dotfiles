@@ -106,7 +106,7 @@ function OpencodeToggle()
 end
 
 vim.keymap.set("n", "\\", OpencodeToggle, { desc = "Toggle opencode buffer" })
-vim.keymap.set("n", "<leader>aa", OpencodeAsk, { desc = "Ask opencode" })
+vim.keymap.set({ "n", "v" }, "<leader>aa", OpencodeAsk, { desc = "Ask opencode" })
 vim.keymap.set("n", "<leader>as", OpencodeSelect, { desc = "Select opencode action" })
 vim.keymap.set("n", "<C-j>", OpencodePageDown, { desc = "Scroll opencode page down" })
 vim.keymap.set("n", "<C-k>", OpencodePageUp, { desc = "Scroll opencode page up" })

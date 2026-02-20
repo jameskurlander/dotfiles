@@ -4,7 +4,6 @@ return {
     ---@type opencode.Opts
     vim.g.opencode_opts = {
       provider = {
-        cmd = "opencode --continue --port",
         enabled = "tmux",
       },
     }
