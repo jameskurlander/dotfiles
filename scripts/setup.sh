@@ -122,5 +122,10 @@ rm -rf "$HOME/.newsboat"
 ln -sf "$DOTFILES_DIR/newsboat" "$HOME/.newsboat"
 echo "${BLUE}Symlinked newsboat config${RESET}"
 
+# Symlink for karabiner-elements
+rm -rf "$HOME/.config/karabiner"
+ln -sf "$DOTFILES_DIR/karabiner" "$HOME/.config/karabiner"
+echo "${BLUE}Symlinked karabiner-elements config${RESET}"
+
 # Refresh the terminal
 reset

@@ -1,0 +1,33 @@
+{
+  "profiles": [
+    {
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Media Controls",
+            "manipulators": [
+              {
+                "from": { "key_code": "f7" },
+                "to": [{ "key_code": "rewind" }],
+                "type": "basic"
+              },
+              {
+                "from": { "key_code": "f8" },
+                "to": [{ "key_code": "play_or_pause" }],
+                "type": "basic"
+              },
+              {
+                "from": { "key_code": "f9" },
+                "to": [{ "key_code": "fastforward" }],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
