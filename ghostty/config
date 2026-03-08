@@ -13,7 +13,7 @@ theme = Aura
 # custom-shader = ./ghostty-shaders/bloom.glsl
 # custom-shader = ./ghostty-shaders/tft.glsl
 # custom-shader = ./ghostty-shaders/glitchy.glsl
-macos-icon = "xray"
+# macos-icon = "xray"
 
 fullscreen = true
 
