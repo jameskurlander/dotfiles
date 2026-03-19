@@ -1,6 +1,10 @@
 font-family = Berkeley Mono
 font-size = 18
 cursor-style = block
+background = 000000
+
+# theme = abc
+# theme = typewriter
 theme = Aura
 # theme = Catppuccin Mocha
 # theme = Jellybeans
@@ -9,11 +13,15 @@ theme = Aura
 # theme = Nvim Dark
 # theme = TokyoNight
 # theme = Tomorrow Night
+
+custom-shader = shaders/cursor_warp.glsl
 # custom-shader = ./ghostty-shaders/retro-terminal.glsl
 # custom-shader = ./ghostty-shaders/bloom.glsl
 # custom-shader = ./ghostty-shaders/tft.glsl
 # custom-shader = ./ghostty-shaders/glitchy.glsl
-# macos-icon = "xray"
+
+macos-icon = "xray"
+macos-titlebar-style = hidden
 
 fullscreen = true
 
@@ -23,6 +31,3 @@ quit-after-last-window-closed = true
 shell-integration = zsh
 clipboard-read = allow
 clipboard-write = allow
-macos-titlebar-style = hidden
-
-custom-shader = shaders/cursor_warp.glsl

@@ -1,0 +1,42 @@
+# Black
+palette = 0=#000000
+# Red
+palette = 1=#ff3300
+# Green
+palette = 2=#00cf9c
+# Yellow
+palette = 3=#ffb400
+# Blue
+palette = 4=#0091ff
+# Magenta
+palette = 5=#f400bc
+# Cyan
+palette = 6=#a177ff
+# White
+palette = 7=#ffffff
+
+# Bright Black
+palette = 8=#000000
+# Bright Red
+palette = 9=#ff3300
+# Bright Green
+palette = 10=#00cf9c
+# Bright Yellow
+palette = 11=#ffb400
+# Bright Blue
+palette = 12=#0091ff
+# Bright Magenta
+palette = 13=#f400bc
+# Bright Cyan
+palette = 14=#a177ff
+# Bright White
+palette = 15=#ffffff
+
+background = #000000
+foreground = #ffffff
+
+cursor-color = #00cf9c
+cursor-text = #000000
+
+selection-background = #000000
+selection-foreground = #ffffff

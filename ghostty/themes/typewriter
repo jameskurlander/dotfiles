@@ -1,0 +1,42 @@
+# Black
+palette = 0=#000000
+# Red
+palette = 1=#000000
+# Green
+palette = 2=#000000
+# Yellow
+palette = 3=#000000
+# Blue
+palette = 4=#000000
+# Magenta
+palette = 5=#000000
+# Cyan
+palette = 6=#000000
+# White
+palette = 7=#ffffff
+
+# Bright Black
+palette = 8=#000000
+# Bright Red
+palette = 9=#000000
+# Bright Green
+palette = 10=#000000
+# Bright Yellow
+palette = 11=#000000
+# Bright Blue
+palette = 12=#000000
+# Bright Magenta
+palette = 13=#000000
+# Bright Cyan
+palette = 14=#000000
+# Bright White
+palette = 15=#ffffff
+
+background = #ffffff
+foreground = #000000
+
+cursor-color = #00cf9c
+cursor-text = #000000
+
+selection-background = #ffffff
+selection-foreground = #000000
