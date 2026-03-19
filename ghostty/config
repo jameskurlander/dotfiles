@@ -17,7 +17,7 @@ theme = Aura
 
 fullscreen = true
 
-working-directory = "users/james/repos/"
+working-directory = "$GHOSTTY_WORKING_DIRECTORY"
 mouse-hide-while-typing = true
 quit-after-last-window-closed = true
 shell-integration = zsh
