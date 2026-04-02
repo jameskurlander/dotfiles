@@ -144,6 +144,11 @@ rm -rf "$HOME/.config/borders"
 ln -sf "$DOTFILES_DIR/borders" "$HOME/.config/borders"
 echo "${BLUE}Symlinked jankyborders config${RESET}"
 
+# Symlink for svim
+rm -rf "$HOME/.config/svim"
+ln -sf "$DOTFILES_DIR/svim" "$HOME/.config/svim"
+echo "${BLUE}Symlinked svim config${RESET}"
+
 # Start services
 echo "${BLUE}Restarting brew services${RESET}"
 brew services restart sketchybar
