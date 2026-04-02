@@ -127,5 +127,10 @@ rm -rf "$HOME/.config/karabiner"
 ln -sf "$DOTFILES_DIR/karabiner" "$HOME/.config/karabiner"
 echo "${BLUE}Symlinked karabiner-elements config${RESET}"
 
+# Symlink for sketchybar
+rm -rf "$HOME/.config/sketchybar"
+ln -sf "$DOTFILES_DIR/sketchybar" "$HOME/.config/sketchybar"
+echo "${BLUE}Symlinked sketchybar config${RESET}"
+
 # Refresh the terminal
 reset
