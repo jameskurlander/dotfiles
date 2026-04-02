@@ -22,7 +22,7 @@ sh $DOTFILES_DIR/osx/set-defaults.sh
 
 # Install & Update Homebrew
 if ! command -v brew &>/dev/null; then
-  echo "Installing Homebrew..."
+  echo "${GREEN}Installing Homebrew...${RESET}"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
   echo "${GREEN}Updating Homebrew...${RESET}"
@@ -32,11 +32,12 @@ fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install Homebrew packages
+echo "${GREEN}Installing packages from Brewfile.work...${RESET}"
 brew bundle --file="$DOTFILES_DIR/homebrew/Brewfile.work"
 
 if [[ "$personal_flag" == true ]]; then
   if [[ -f "$DOTFILES_DIR/homebrew/Brewfile.personal" ]]; then
-    echo "Installing from Brewfile.personal..."
+    echo "${GREEN}Installing packages from Brewfile.personal...${RESET}"
     brew bundle --file="$DOTFILES_DIR/homebrew/Brewfile.personal"
   else
     echo "${ORANGE}WARNING: Brewfile.personal not found in dotfiles directory.${RESET}"
@@ -99,8 +100,14 @@ ln -sf "$DOTFILES_DIR/ghostty" "$HOME/.config/ghostty"
 echo "${BLUE}Symlinked ghostty config${RESET}"
 
 # Install ghostty-cursor-shaders
-git clone https://github.com/sahaj-b/ghostty-cursor-shaders ~/.config/ghostty/shaders
-echo "${GREEN}Installing ghostty-cursor-shaders...${RESET}"
+SHADERS_DIR="$HOME/.config/ghostty/shaders"
+if [ -d "$SHADERS_DIR" ]; then
+  echo "${GREEN}Updating ghostty-cursor-shaders...${RESET}"
+  git -C "$SHADERS_DIR" pull
+else
+  echo "${GREEN}Installing ghostty-cursor-shaders...${RESET}"
+  git clone https://github.com/sahaj-b/ghostty-cursor-shaders "$SHADERS_DIR"
+fi
 
 # Symlink for neovim
 rm -rf "$HOME/.config/nvim"
@@ -136,6 +143,11 @@ echo "${BLUE}Symlinked sketchybar config${RESET}"
 rm -rf "$HOME/.config/borders"
 ln -sf "$DOTFILES_DIR/borders" "$HOME/.config/borders"
 echo "${BLUE}Symlinked jankyborders config${RESET}"
+
+# Start services
+echo "${BLUE}Restarting brew services${RESET}"
+brew services restart sketchybar
+brew services restart borders
 
 # Refresh the terminal
 reset
