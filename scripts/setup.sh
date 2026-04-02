@@ -148,6 +148,7 @@ echo "${BLUE}Symlinked jankyborders config${RESET}"
 echo "${BLUE}Restarting brew services${RESET}"
 brew services restart sketchybar
 brew services restart borders
+brew services restart svim
 
 # Refresh the terminal
 reset
