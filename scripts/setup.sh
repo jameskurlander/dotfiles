@@ -132,5 +132,10 @@ rm -rf "$HOME/.config/sketchybar"
 ln -sf "$DOTFILES_DIR/sketchybar" "$HOME/.config/sketchybar"
 echo "${BLUE}Symlinked sketchybar config${RESET}"
 
+# Symlink for jankyborders
+rm -rf "$HOME/.config/borders"
+ln -sf "$DOTFILES_DIR/borders" "$HOME/.config/borders"
+echo "${BLUE}Symlinked jankyborders config${RESET}"
+
 # Refresh the terminal
 reset

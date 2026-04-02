@@ -2,6 +2,7 @@ font-family = Berkeley Mono
 font-size = 18
 cursor-style = block
 background-opacity = 0.8
+background-blur = 10
 
 # theme = abc
 # theme = typewriter
