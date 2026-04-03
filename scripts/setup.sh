@@ -20,6 +20,10 @@ done
 echo "Setting MacOS defaults..."
 sh $DOTFILES_DIR/osx/set-defaults.sh
 
+# Install xcode cli tools
+echo "Installing xcode cli tools..."
+xcode-select --install
+
 # Install & Update Homebrew
 if ! command -v brew &>/dev/null; then
   echo "${GREEN}Installing Homebrew...${RESET}"
@@ -28,6 +32,9 @@ else
   echo "${GREEN}Updating Homebrew...${RESET}"
   brew update
 fi
+
+# Turns off anonymous analytics
+brew analytics off
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
