@@ -156,11 +156,17 @@ rm -rf "$HOME/.config/svim"
 ln -sf "$DOTFILES_DIR/svim" "$HOME/.config/svim"
 echo "${BLUE}Symlinked svim config${RESET}"
 
+# Symlink for yabai
+rm -rf "$HOME/.config/yabai"
+ln -sf "$DOTFILES_DIR/yabai" "$HOME/.config/yabai"
+echo "${BLUE}Symlinked yabai config${RESET}"
+
 # Start services
 echo "${BLUE}Restarting brew services${RESET}"
 brew services restart sketchybar
 brew services restart borders
 brew services restart svim
+brew services restart fyabai
 
 # Refresh the terminal
 reset
