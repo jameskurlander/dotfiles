@@ -161,7 +161,7 @@ echo "${BLUE}Restarting brew services${RESET}"
 brew services restart sketchybar
 brew services restart borders
 brew services restart svim
-brew services restart fyabai
+yabai --restart-service
 
 # Refresh the terminal
 reset
