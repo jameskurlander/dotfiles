@@ -5,6 +5,7 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.Dock autohide-delay -float 5; killall Dock
 defaults write com.apple.dock "mru-spaces" -bool "false"
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+defaults write -g NSWindowResizeTime -float 0.001
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 defaults write NSGlobalDomain KeyRepeat -int 1
@@ -13,6 +14,7 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
 defaults write NSGlobalDomain AppleHighlightColor -string "0.65098 0.85490 0.58431"
 defaults write NSGlobalDomain AppleAccentColor -int 1
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
 defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.screencapture type -string "png"

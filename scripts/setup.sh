@@ -141,11 +141,6 @@ rm -rf "$HOME/.config/karabiner"
 ln -sf "$DOTFILES_DIR/karabiner" "$HOME/.config/karabiner"
 echo "${BLUE}Symlinked karabiner-elements config${RESET}"
 
-# Symlink for sketchybar
-rm -rf "$HOME/.config/sketchybar"
-ln -sf "$DOTFILES_DIR/sketchybar" "$HOME/.config/sketchybar"
-echo "${BLUE}Symlinked sketchybar config${RESET}"
-
 # Symlink for jankyborders
 rm -rf "$HOME/.config/borders"
 ln -sf "$DOTFILES_DIR/borders" "$HOME/.config/borders"
