@@ -1,5 +1,6 @@
 tap "arl/arl"
 tap "FelixKratz/formulae"
+tap "homebrew/cask-fonts"
 
 brew "antidote"
 brew "bat"
@@ -48,6 +49,12 @@ brew "jq"
 brew "poppler"
 brew "resvg"
 brew "sevenzip"
+
+brew "font-ubuntu"
+brew "font-fontawesome"
+brew "font-hack-nerd-font"
+brew "font-fira-code-nerd-font"
+cask "font-monocraft"
 
 cask "caffeine"
 cask "docker-desktop"
