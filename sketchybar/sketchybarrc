@@ -3,7 +3,7 @@ PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 FONT="Monocraft"
 PADDINGS=3
 
-sketchybar --bar     height=34                                                     \
+sketchybar --bar     height=33                                                     \
                      corner_radius=0                                              \
                      border_width=0                                                \
                      margin=0                                                     \
@@ -34,10 +34,10 @@ sketchybar --animate sin 30 --bar y_offset=-100 y_offset=0
 . "$ITEM_DIR/system.sh"
 
 ### Center ###
-. "$ITEM_DIR/spaces.sh"
+# . "$ITEM_DIR/spaces.sh"
 
 ### Right ###
 . "$ITEM_DIR/time.sh"
 . "$ITEM_DIR/sound.sh"
 . "$ITEM_DIR/battery.sh"
-. "$ITEM_DIR/playback.sh"
+# . "$ITEM_DIR/playback.sh"

@@ -55,6 +55,15 @@ fi
 echo "${GREEN}Updating Homebrew packages...${RESET}"
 brew upgrade
 
+# Setup spicetify config path
+spicetify config spotify_path "/Applications/Spotify.app/Contents/Resources"
+
+# Install spicetify marketplace
+curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
+
+spicetify
+spicetify backup apply
+
 # Symlink for zsh
 rm -rf "$HOME/.zshrc"
 ln -sf "$DOTFILES_DIR/zsh/zshrc" "$HOME/.zshrc"
