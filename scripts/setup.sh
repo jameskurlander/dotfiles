@@ -165,14 +165,8 @@ rm -rf "$HOME/.config/yabai"
 ln -sf "$DOTFILES_DIR/yabai" "$HOME/.config/yabai"
 echo "${BLUE}Symlinked yabai config${RESET}"
 
-# Symlink for sketchybar
-rm -rf "$HOME/.config/sketchybar"
-ln -sf "$DOTFILES_DIR/sketchybar" "$HOME/.config/sketchybar"
-echo "${BLUE}Symlinked sketchybar config${RESET}"
-
 # Start services
 echo "${BLUE}Restarting brew services${RESET}"
-brew services restart sketchybar
 brew services restart borders
 brew services restart svim
 yabai --restart-service

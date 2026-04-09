@@ -11,7 +11,6 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-defaults write NSGlobalDomain _HIHideMenuBar -bool true
 defaults write NSGlobalDomain AppleHighlightColor -string "0.00000 0.81176 0.61176"
 defaults write NSGlobalDomain AppleAccentColor -int -1
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
