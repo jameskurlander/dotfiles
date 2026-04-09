@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "theme": "system",
+  "keybinds": {
+    "command_list": "ctrl+s",
+    "input_newline": "none",
+    "messages_half_page_up": "ctrl+u",
+    "messages_half_page_down": "ctrl+d",
+    "messages_last": "ctrl+g",
+    "messages_first": "none"
+  }
+}
