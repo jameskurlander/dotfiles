@@ -82,12 +82,3 @@ vim.api.nvim_create_user_command("FormatToggle", function()
 end, {
   desc = "Toggle autoformat-on-save",
 })
-
--- Quits OpenCode
--- NOTE: This will quit ALL instances. Probably fine for now, but not ideal
--- vim.api.nvim_create_autocmd("VimLeavePre", {
---   group = vim.api.nvim_create_augroup("OpenCodeCleanup", { clear = true }),
---   callback = function()
---     vim.fn.jobstart("pkill -f opencode", { detach = true })
---   end,
--- })

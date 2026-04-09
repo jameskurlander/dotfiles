@@ -88,32 +88,12 @@ function OpencodeAsk()
   opencode.ask("@this: ", { submit = true })
 end
 
-function OpencodePageUp()
-  opencode.command("session.half.page.up")
-end
-
-function OpencodePageDown()
-  opencode.command("session.half.page.down")
-end
-
-function OpencodeScrollBottom()
-  opencode.command("session.last")
-end
-
 function OpencodeSelect()
   opencode.select()
 end
 
-function OpencodeToggle()
-  opencode.toggle()
-end
-
--- vim.keymap.set("n", "\\", OpencodeToggle, { desc = "Toggle opencode buffer" })
 vim.keymap.set({ "n", "v" }, "<leader>aa", OpencodeAsk, { desc = "Ask opencode" })
 vim.keymap.set("n", "<leader>as", OpencodeSelect, { desc = "Select opencode action" })
--- vim.keymap.set("n", "<C-j>", OpencodePageDown, { desc = "Scroll opencode page down" })
--- vim.keymap.set("n", "<C-k>", OpencodePageUp, { desc = "Scroll opencode page up" })
--- vim.keymap.set("n", "<C-g>", OpencodeScrollBottom, { desc = "Scroll opencode to bottom" })
 
 -- Telescope
 local builtin = require("telescope.builtin")
