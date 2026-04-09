@@ -2,5 +2,15 @@
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "plan",
   "theme": "system",
+  "mcp": {
+    "jira": {
+      "type": "remote",
+      "url": "https://mcp.atlassian.com/v1/sse"
+    },
+    "figma": {
+      "type": "remote",
+      "url": "https://mcp.figma.com/mcp"
+    },
+  }
 }
 
