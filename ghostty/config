@@ -24,7 +24,7 @@ custom-shader = shaders/cursor_warp.glsl
 macos-icon = "xray"
 macos-titlebar-style = hidden
 
-fullscreen = true
+fullscreen = false
 
 working-directory = "$GHOSTTY_WORKING_DIRECTORY"
 mouse-hide-while-typing = true
