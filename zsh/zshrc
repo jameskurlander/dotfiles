@@ -43,3 +43,5 @@ zstyle ':antidote:bundle' use-cache yes
 antidote load
 
 eval "$(zoxide init zsh)"
+
+export CLAUDE_CODE_NO_FLICKER=1
