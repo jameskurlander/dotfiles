@@ -4,6 +4,27 @@
       "complex_modifications": {
         "rules": [
           {
+            "description": "Caps Lock to Left Control",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_control"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Open Applications",
             "manipulators": [
               {
