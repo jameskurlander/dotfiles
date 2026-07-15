@@ -9,5 +9,11 @@
     "messages_half_page_down": "ctrl+d",
     "messages_last": "ctrl+g",
     "messages_first": "none"
+  },
+  "attention": {
+    "enabled": true,
+    "notifications": true,
+    "sound": true,
+    "volume": 0.4
   }
 }
