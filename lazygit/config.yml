@@ -1,5 +1,9 @@
 gui:
+  showBottomLine: false
+  showRandomTip: false
   showCommandLog: false
+
+disableStartupPopups: true
 
 git:
   pagers:
