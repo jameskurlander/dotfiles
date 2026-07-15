@@ -115,6 +115,11 @@ rm -rf "$HOME/.config/ghostty"
 ln -sf "$DOTFILES_DIR/ghostty" "$HOME/.config/ghostty"
 echo "${BLUE}Symlinked ghostty config${RESET}"
 
+# Symlink for lazygit
+rm -rf "$HOME/.config/lazygit"
+ln -sf "$DOTFILES_DIR/lazygit" "$HOME/.config/lazygit"
+echo "${BLUE}Symlinked lazygit config${RESET}"
+
 # Install ghostty-cursor-shaders
 SHADERS_DIR="$HOME/.config/ghostty/shaders"
 if [ -d "$SHADERS_DIR" ]; then
