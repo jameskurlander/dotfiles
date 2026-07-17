@@ -11,11 +11,8 @@ brew "eza"
 brew "fzf"
 brew "gh"
 brew "gitmux"
-<<<<<<< Updated upstream
 brew "git-delta"
-=======
 brew "go"
->>>>>>> Stashed changes
 brew "harlequin"
 brew "hexyl"
 brew "httpie"
