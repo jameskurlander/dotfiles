@@ -1,6 +1,7 @@
 cask "discord"
 cask "steam"
 cask "curseforge"
+cask "jellyfin"
 cask "microsoft-outlook"
 cask "microsoft-excel"
 cask "microsoft-word"
