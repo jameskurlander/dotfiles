@@ -2,11 +2,9 @@ gui:
   showBottomLine: false
   showRandomTip: false
   showCommandLog: false
-
 disableStartupPopups: true
-
 git:
-  pagers:
+  diffRenderers:
     - name: delta
       colorArg: always
-      pager: 'delta --paging=never --line-numbers --syntax-theme=ansi --plus-style="syntax #1b3326" --minus-style="syntax #3a2228"'
+      command: 'delta --paging=never --line-numbers --syntax-theme=ansi --plus-style="syntax #1b3326" --minus-style="syntax #3a2228"'
