@@ -2,7 +2,6 @@ tap "arl/arl"
 
 brew "antidote"
 brew "bat"
-brew "FelixKratz/formulae/borders"
 brew "btop"
 brew "circumflex"
 brew "cmatrix"

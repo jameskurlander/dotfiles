@@ -155,11 +155,6 @@ rm -rf "$HOME/.config/karabiner"
 ln -sf "$DOTFILES_DIR/karabiner" "$HOME/.config/karabiner"
 echo "${BLUE}Symlinked karabiner-elements config${RESET}"
 
-# Symlink for jankyborders
-rm -rf "$HOME/.config/borders"
-ln -sf "$DOTFILES_DIR/borders" "$HOME/.config/borders"
-echo "${BLUE}Symlinked jankyborders config${RESET}"
-
 # Symlink for svim
 rm -rf "$HOME/.config/svim"
 ln -sf "$DOTFILES_DIR/svim" "$HOME/.config/svim"
@@ -172,7 +167,6 @@ echo "${BLUE}Symlinked yabai config${RESET}"
 
 # Start services
 echo "${BLUE}Restarting brew services${RESET}"
-brew services restart borders
 brew services restart svim
 yabai --restart-service
 
