@@ -3,6 +3,7 @@ gui:
   showRandomTip: false
   showCommandLog: false
 disableStartupPopups: true
+promptToReturnFromSubprocess: false
 git:
   diffRenderers:
     - name: delta
