@@ -120,6 +120,11 @@ rm -rf "$HOME/.config/lazygit"
 ln -sf "$DOTFILES_DIR/lazygit" "$HOME/.config/lazygit"
 echo "${BLUE}Symlinked lazygit config${RESET}"
 
+# Symlink for lazydocker
+rm -f "$HOME/Library/Application Support/lazydocker/config.yml"
+ln -sf "$DOTFILES_DIR/lazydocker/config.yml" "$HOME/Library/Application Support/lazydocker/config.yml"
+echo "${BLUE}Symlinked lazydocker config${RESET}"
+
 # Install ghostty-cursor-shaders
 SHADERS_DIR="$HOME/.config/ghostty/shaders"
 if [ -d "$SHADERS_DIR" ]; then
