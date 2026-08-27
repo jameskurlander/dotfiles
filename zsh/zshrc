@@ -37,6 +37,7 @@ alias speedtest="speedtest-cli"
 alias spotify="spotify_player"
 alias f="thefuck"
 alias lg="lazygit"
+alias ld="lazydocker"
 
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 zstyle ':antidote:bundle' use-cache yes
