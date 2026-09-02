@@ -106,8 +106,8 @@ else
 fi
 
 # Symlink for opencode
-rm -f "$HOME/.config/opencode/opencode.jsonc"
-ln -s "$DOTFILES_DIR/opencode/opencode.jsonc" "$HOME/.config/opencode/opencode.jsonc"
+rm -rf "$HOME/.config/opencode"
+ln -sf "$DOTFILES_DIR/opencode" "$HOME/.config/opencode"
 echo "${BLUE}Symlinked opencode config${RESET}"
 
 # Symlink for ghostty
