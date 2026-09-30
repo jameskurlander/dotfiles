@@ -8,7 +8,9 @@
     "messages_half_page_up": "ctrl+u",
     "messages_half_page_down": "ctrl+d",
     "messages_last": "ctrl+g",
-    "messages_first": "none"
+    "messages_first": "none",
+    "tool_details": "<leader>t",
+    "theme_list": "none"
   },
   "attention": {
     "enabled": true,

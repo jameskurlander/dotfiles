@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "permission": "allow",
   "default_agent": "plan",
   "theme": "system",
   "mcp": {
@@ -13,4 +14,3 @@
     },
   }
 }
-
