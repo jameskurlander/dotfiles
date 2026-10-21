@@ -1,0 +1,15 @@
+onboarding = false
+
+[ui.toast]
+delivery = "terminal"
+
+[ui]
+show_agent_labels_on_pane_borders = false
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[keys]
+next_workspace = "prefix+j"
+previous_workspace = "prefix+k"

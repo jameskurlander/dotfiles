@@ -112,9 +112,14 @@ ln -sf "$DOTFILES_DIR/lazygit" "$HOME/.config/lazygit"
 echo "${BLUE}Symlinked lazygit config${RESET}"
 
 # Symlink for lazydocker
-rm -f "$HOME/Library/Application Support/lazydocker/config.yml"
+rm -rf "$HOME/Library/Application Support/lazydocker/config.yml"
 ln -sf "$DOTFILES_DIR/lazydocker/config.yml" "$HOME/Library/Application Support/lazydocker/config.yml"
 echo "${BLUE}Symlinked lazydocker config${RESET}"
+
+# Symlink for herdr
+rm -rf "$HOME/.config/herdr/config.toml"
+ln -sf "$DOTFILES_DIR/herdr/config.toml" "$HOME/.config/herdr/config.toml"
+echo "${BLUE}Symlinked herdr config${RESET}"
 
 # Install ghostty-cursor-shaders
 SHADERS_DIR="$HOME/.config/ghostty/shaders"
